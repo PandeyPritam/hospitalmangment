@@ -1,0 +1,508 @@
+body{
+	font-family: 'century Gothic';
+	margin: 0;
+}
+
+h1{
+	padding: 8px;
+	background: red;
+	border-radius:8px;
+	margin: 0;
+	font-size: 64px;
+	font-family: 'century Gothic';
+}
+
+p{
+	line-height: 1.5;
+}
+
+main{
+	margin: 0 auto;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	text-decoration: underline;
+}
+input,
+textarea{
+	height:32px;
+	padding: 0 16px;
+	font-family: 'century Gothic', 'sans-serif';
+	font-size: 20px;
+	border:none;
+	box-shadow:inset 8px 3px 18px -4px rgba(0,0,0,0.4); 
+}
+
+input:focus,
+textarea: focus{
+	outline: none;
+}
+
+#banner{
+	height:100vh;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	flex-direction: column;
+	background: rgba(0,0,0,0.2) url('data:image/jpeg;base64,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');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-blend-mode: overlay;
+	color: white;
+}
+
+#banner h3 {
+	background: black;
+	border-radius: 8px;
+	padding: 0 24px;
+	font-size: 24px;
+
+}
+ 
+#searchbox {
+	position: fixed;
+	right:0;
+	top: 24px;
+	width: 500px;
+	pointer-events: none;
+	z-index: 50;
+	transition: 0.4s;
+}
+
+#searchbox input{
+height: 48px;
+width: 100%;
+}
+ 
+nav{
+	height:72px;
+	background: #202125;
+	width: 100%;
+	margin: 0;
+	position: fixed;
+	font-family: 'century Gothic',sans-serif;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 16px 0 0;
+	box-sizing: border-box;
+	z-index: 100;
+}
+
+nav a{
+	padding: 0 32px;
+	color:#eee;
+	transition: 0.4s;
+}
+
+nav a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+nav ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	margin: 0;
+}
+
+.active{
+	color: blue;
+}
+
+#logo-img{
+	display:flex;
+	height: 100%;
+	background: #111;
+	padding: 0 32px;
+	align-items: center;
+	color: white;
+	transition: 0.4s
+}
+
+logo-img img{
+	max-width: 100%;
+	height: 50px;
+}
+
+#menu-icon{
+	height: 100%;
+	font-size: 28px;
+	padding: 0 4px;
+	color: #eee;
+	display: none;
+	align-items: center;
+}
+
+#search-icon
+{
+	color: white;
+	padding: 0 32px;
+	cursor: pointer;
+	transition: 0.4s;
+
+}
+
+#search-icon:hover
+{
+	color: red;
+}
+
+#slideout-menu{
+	background: #2d3436;
+	z-index: 100;
+	position: fixed;
+	transition: 0.4s;
+	margin-top: 72px;
+	width: 100%;
+	text-align: center;
+	display: none;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#slideout-menu ul{
+	list-style: none;
+	padding: 0 32px;
+}
+
+#slideout-menu ul li {
+	padding: 8px;
+}
+
+#slideout-menu a{
+	font-family: 'century Gothic';
+	font-size: 20px;
+	color: white;
+}
+
+#slideout-menu input{
+	width: 85%;
+	padding: 8px;
+	font-family: 'century Gothic','sans-serif';
+	font-size: 20px;
+	text-align: center;
+}
+
+.section-heading{
+	font-size: 32px;
+	font-family: 'century Gothic';
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+	transition: all 0.4s ;
+	display: inline-block;
+	padding: 4px 32px;
+
+}
+
+.section-heading:hover
+{
+	padding: 4px 48px;
+	background: red;
+}
+
+#section-source p{
+	padding: 8px;
+	text-align: center;
+}
+
+.card-image{
+	transition: 0.4s;
+}
+
+
+.card .card-description{
+	padding: 0 8px;
+}
+
+.card-meta-blogspot{
+	color: #333;
+	font-size: 14px;
+	padding: 16px;
+	font-family: 'century Gothic';
+}
+
+.card-meta-blogspot a{
+	color: #333;
+}
+
+.btn-readmore{
+	padding: 8px 24px;
+	border: 3px solid black;
+	transition:0.4px;
+	display: inline-block;
+	margin-bottom: 24px;
+	margin-left: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	background: white;
+}
+.btn-readmore:hover{
+	background: red;
+	text-decoration: none;
+	padding: 8px 64px 8px 24px;
+	color: white;
+}
+
+footer{
+	background: black;
+	padding: 8px;
+	color: #eee;
+	display: flex;
+}
+footer a{
+	color: white;
+}
+
+footer #left-footer {
+	flex: 1;
+	border-right: 1px solid red;
+	padding-left: 32px;
+}
+
+
+footer #left-footer ul{
+	padding: 0;
+	list-style: none;
+	line-height: 1.5;
+}
+
+footer #right-footer{
+	flex:2;
+	padding: 8px;
+	text-align:center;
+}
+
+
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github{
+	color: white;
+	transition: 0.4s;
+}
+
+footer #social-media-footer ul{
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+}
+
+footer #social-media-footer ul li{
+	font-size: 24px;
+	padding: 16px;
+	transition: 0.4s;
+}
+
+footer #social-media-footer ul li: hover a .fa-youtube{
+	color: red;
+}
+
+footer #social-media-footer ul li: hover a .fa-facebook{
+	color: #3b5998;
+}
+
+footer #social-media-footer ul li: hover a .fa-instagram{
+	color: pink;
+}
+
+.page-heading{
+	font-size: 32px;
+	font-family: 'century Gothic';
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+	transition: all 0.4s;
+	display: inline-block;
+	padding: 4px 32px;
+	margin-top: 120px;
+}
+
+.page-heading:hover{
+	padding: 4px 48px;
+	background: red;
+}
+
+.card-meta{
+	color: #333;
+	font-size: 14px;
+	padding-left: 8px;
+	font-family: 'century Gothic';
+}
+
+.card-meta a{
+	color: #333;
+}
+
+.pagination{
+	padding: 8px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.pagination a{
+	border-top: 3px solid white;
+	display: inline-block;
+	padding: 8px 16px;
+	transition: 0.4s;
+}
+
+.pagination a:hover{
+	text-decoration: none;
+	border-top: 3px solid black;
+}
+
+
+#post-container{
+
+  display: flex;
+
+}
+
+
+
+#blogpost{
+  display: flex;
+  flex-direction:column;
+  width:70%;
+  border-left:1px solid #999;
+}
+
+
+#blogpost .card{
+  width:100%;
+}
+
+#blogpost .card-image:hover{
+  box-shadow: none;
+}
+
+
+#sidebar{
+  background:#333;
+  flex:1;
+  padding: 8px 16px;
+  color:white;
+  box-shadow: inset 27px 0 51px -18px rgba(0,0,0,0.75);
+}
+
+
+#comments-section{
+  border-top: 2px solid #eee;
+  padding:8px;
+
+}
+
+
+@media(max-width: 900px)
+{
+	nav ul{
+		display: none;
+	}
+
+	#menu-icon{
+		display: flex;
+	}
+	#slideout-menu{
+		display: block;
+	}
+}
+
+@media(max-width: 719px){
+	main{
+		width: 95%;
+	}
+
+	section{
+		flex-direction: column;
+	}
+	.card,
+	.card .card-image img{
+
+	
+	{
+		width: 100%;
+	}
+}
+
+
+footer{
+	flex-direction: column;
+	text-align: center;
+}
+footer #left-footer{
+	flex: 1;
+	border-right: 0;
+	padding-left: 0;
+}
+
+footer #right-footer {
+	background: #eee;
+	color: black;
+}
+
+
+footer #right-footer a {
+	color: black;
+}
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github{
+	color: black;
+	transition: 0.4s;
+
+}
+
+@media(max-width: 600px){
+	maina{
+		width: 100%;
+	}
+}
+h1{
+	font-size: 48px;
+}
+
+h3{
+	font-size: 48px;
+}
+
+#banner h3{
+	font-size: 20px;
+}
+
+
+.card{
+	text-align: center;
+}
+
+#logo-img{
+	padding:0;
+}
+}
+
+@media(min-width: 720px){
+	main{
+		width: 95%
+	}
+	card{
+width: 45%
+	}
+	.card .card-image img{
+		width: 50%;
+	}
+}
+
+@media(min-width:1200px){
+	main{
+		width: 85%;
+	}
+}
